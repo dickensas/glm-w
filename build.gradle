@@ -6,3 +6,7 @@ plugins {
 library {
     targetMachines.add(machines.windows.x86_64)
 }
+
+tasks.withType(CppCompile).configureEach {
+    compilerArgs.add '-Ic:/msys64/mingw64/include'
+}
